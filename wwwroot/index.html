@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="site.css"/>
+</head>
+<body>
+    <h3 id="counter"></h3>
+
+    <table>
+        <tbody id="todos"></tbody>
+    </table>
+    <a id="aExport" href = "javascript:void(0);" style="pointer-events: none; color: lightgray;" download="export.json">Export</a>
+
+    <br/>
+    <br/>
+    
+    <script src="site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getItems();
+    </script>
+
+    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+        <input type="text" id="add-name" placeholder="New to-do">
+        <input type="submit" value="Add new task">
+    </form>
+
+</body>
+</html>
